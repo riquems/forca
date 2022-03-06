@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Cena inicial
 public class StartSceneManager : MonoBehaviour
 {
-    public int maxNumTentativas = 10;
-    public int numTentativas = 0;
-
-    // Start is called before the first frame update
     void Start()
     {
+        // Reinicializa o jogo
         PlayerPrefs.SetInt("score", 0);
+        GameObject.FindGameObjectWithTag("IntroMusic").GetComponent<GameMusic>().PlayMusic();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -22,6 +20,7 @@ public class StartSceneManager : MonoBehaviour
 
     public void OnStartGameButtonPressed()
     {
+        // Inicia um novo jogo
         SceneManager.LoadScene("GameScene");
     }
 

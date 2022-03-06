@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Classe que representa uma letra de uma palavra
 public class Letra : MonoBehaviour
 {
     public char letra; // letra da palavra
@@ -11,15 +12,13 @@ public class Letra : MonoBehaviour
     public string simboloQuandoEstiverOculta = "?"; // símbolo para mostrar quando a letra estiver oculta
     private Text text; // referencia para o texto no jogo
 
-    // Start is called before the first frame update
     void Start()
     {
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     // Método para atribuir uma letra
